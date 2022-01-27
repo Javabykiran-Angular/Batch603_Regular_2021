@@ -1,0 +1,16 @@
+<p>property-binding works!</p>
+
+<!-- property Binding=> it binds a dynamic data to the html attribute/directive/customAttribute -->
+<!-- syntax => [html attribute/directive/customAttribute]="PropertyName" -->
+
+<input type="text" placeholder="Enter the Name " [value]="name"> <br><br>
+<img class="myimage" [src]="imgUrl" alt="">
+<hr>
+
+<div hidden=" {{isHidden}} ">
+   Hide a contetnt using String Interpolation
+</div> <br><br>
+
+<div [hidden]="isHidden">
+  Hide a contetnt using Property Binding
+</div>
