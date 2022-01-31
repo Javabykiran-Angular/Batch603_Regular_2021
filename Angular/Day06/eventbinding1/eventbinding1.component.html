@@ -1,0 +1,20 @@
+<p>eventbinding1 works!</p>
+
+<!-- click => event -->
+<!-- syntax=> (eventName)="CustomMethod/InbuildMethod" -->
+
+<button (click)="onClick()">Click Event</button> <br>
+<img src="../../assets/bg.jpeg" (click)="imgClick()" alt=""> <br><br>
+
+<!-- $event=> it is a special variable given by angular
+  it gives Current DOM Element Information
+  $event is a json object
+-->
+<button (click)="onClick1($event)" value="Doller event Data" >doller variable</button>
+<br><br>
+
+<input #inputname type="text" placeholder="Enter the Name" ><br><br>
+<button (click)="onSend(inputname)">Send</button>
+<hr>
+<input #inputname1 type="text" placeholder="Enter the Name" ><br><br>
+<button (click)="onSend1(inputname1.value)">Send</button>
