@@ -1,0 +1,22 @@
+<p>event-binding2 works!</p>
+
+<input #num1 type="text" placeholder="Enter the Number1"> <br><br>
+<input #num2 type="text" placeholder="Enter the Number2"> <br><br>
+<button (click)="onAddition(num1.value,num2.value)">Addition</button> <br><br>
+<input type="text" placeholder="Result" [value]="result">
+<hr>
+<!-- change event -->
+<input #inputname type="text" (change)="onChange(inputname)"
+placeholder="enter the name"> <hr>
+ <input type="text" (keyup)="onKeyUp()" placeholder="Key Up Event"><br><br>
+ <input type="text" (keydown)="onKeyDown()" placeholder="Key down Event"> <br>
+ <hr>
+
+ <h2>Two way Binding</h2>
+ <!-- ngModel => It is used for Two way binding
+    [(ngModel)]="Propertyname"
+-->
+
+<input type="text" [(ngModel)]="myname"
+placeholder="Enter the Name"><br>
+{{myname}}
