@@ -1,0 +1,10 @@
+<p>parent works!</p>
+ 
+<h2>data is ::  {{datafromChild}} </h2>
+
+<hr>
+<!-- <app-child1 [ParerntStrdata]="strdata"></app-child1> -->
+
+<hr>
+<!-- <app-child2 (ChildStrEvent)="datafromChild=$event" ></app-child2> -->
+<app-child2 (ChildStrEvent)="onReceive($event)" ></app-child2>
