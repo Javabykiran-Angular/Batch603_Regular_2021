@@ -1,0 +1,11 @@
+
+tr,td,th{
+  border: 1px solid;
+}
+button{
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  text-transform: uppercase;
+  border: 2px solid springgreen;
+}

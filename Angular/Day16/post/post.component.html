@@ -1,0 +1,50 @@
+<p>post works!</p>
+
+<label for="">Title::</label>
+<input #inputtitle type="text" placeholder="Enter the Title"> <br><br>
+
+<label for="">Body::</label>
+<input #inputBody type="text" placeholder="Enter the Body"> <br><br>
+
+<button (click)="onSend(inputtitle.value,inputBody.value)" >Send</button>
+
+<hr>
+
+
+<div [hidden]="ishidden">
+  <label for="">ID::</label>
+  <input  type="text" [(ngModel)]="id"
+  placeholder="Enter the ID" readonly> <br><br>
+  
+  <label for="">Title::</label>
+  <input  type="text" [(ngModel)]="title"
+   placeholder="Enter the Title"> <br><br>
+  
+  <label for="">Body::</label>
+  <input  type="text" [(ngModel)]="body"
+  placeholder="Enter the Body"> <br><br>
+
+  <button (click)="onUpdate()">Update</button>
+  
+</div>
+
+<hr>
+
+<table>
+  <thead>
+    <th>ID</th>
+    <th>Action</th>
+    <th>Title</th>
+    <th>Body</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of PostArr">
+      <td> {{item.id}} </td>
+      <td> <button (click)="onEdit(item)">Edit</button> 
+          <button (click)="onDelete(item.id)">Delete</button>
+      </td>
+      <td> {{item.title}} </td>
+      <td> {{item.body}} </td>
+    </tr>
+  </tbody>
+</table>
